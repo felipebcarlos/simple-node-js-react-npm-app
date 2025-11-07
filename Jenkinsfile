@@ -1,5 +1,6 @@
 pipeline {
-    agent {
+    // agent { label 'docker-ssh-jenkins-agent' } // <-- TROQUE ISSO
+    agent { // <-- POR ISSO
         docker {
             image 'node:lts-buster-slim'
             args '-p 3000:3000'
